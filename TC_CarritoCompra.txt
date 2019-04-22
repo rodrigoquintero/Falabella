@@ -1,0 +1,60 @@
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito con tarjeta de crédito con cupo
+Given: realizo compra a través del carrito 
+When: selecciono un producto y realizo pago con tarjeta de crédito con cupo
+Then: debe permitir realizar la compra de manera exitosa.
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito con tarjeta de crédito sin cupo
+Given: realizo compra a través del carrito 
+When: selecciono un producto y realizo pago con tarjeta de crédito sin cupo
+Then: No debe permitir realizar la compra.
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito iniciando sesión
+Given: realizo compra a través del carrito iniciando sesión 
+When: selecciono un producto y realizo pago
+Then: debe permitir realizar la compra de manera exitosa manteniendo sesión iniciada.
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito aumentando cantidad de producto
+Given: realizo compra a través del carrito seleccionando un producto
+When: aumento producto 
+Then: el precio debe actualizarse para reflejar la cifra correcta.
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito agregando producto nuevo al carrito
+Given: realizo compra a través del carrito seleccionando un producto
+When: agrego producto nuevo
+Then: el carrito debe actualizarse con el producto nuevo, nombre, imagen y precio correcto
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito agregando producto y luego anularlo
+Given: realizo compra a través del carrito seleccionando un producto
+When: agrego producto nuevo y luego lo anulo
+Then: el carrito debe actualizar el precio correcto con el producto anulado
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra a través del carrito agregando mismo producto varias veces
+Given: realizo compra a través del carrito 
+When: agrego mismo producto varias veces
+Then: debe haber un producto en el carrito, pero debe reflejar la cantidad y el precio total de todos los productos
+
+
+
+Feature: Compra a través del carrito
+Scenario: Realizar compra eliminando todos los productos del carrito
+Given: realizo compra a través del carrito 
+When: eliminando todos los productos del carrito
+Then: no debe permitir realizar compra

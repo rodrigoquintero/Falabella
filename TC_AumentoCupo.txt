@@ -1,0 +1,100 @@
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con bloqueo que impida comprar
+Given: intento realizar un aumento de cupo
+When: el cliente tiene bloqueo en su tarjeta que impida hacer su compra
+Then: no debe permitir realizar el aumento de cupo
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con mora interna en tarjeta de crédito mayor a 5 días
+Given: intento realizar un aumento de cupo
+When: el cliente tiene mora interna en tarjeta de crédito mayor a 5 días
+Then: no debe permitir realizar el aumento de cupo
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con informes comerciales moras y protestos.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene informes comerciales con moras y protestos
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con renegociación vigente.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene renegociación vigente
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con renegociación vigente.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene renegociación vigente
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con antigüedad en su tarjeta igual o menor a 6 meses.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene antigüedad en su tarjeta igual o menor a 6 meses
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente marca de fraude.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene en su historial marca de fraude
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con porcentaje de endeudamiento mayor a 40%.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene porcentaje de endeudamiento mayor a 40%
+Then: no debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo a cliente con línea de crédito disponible en la SBIF.
+Given: intento realizar un aumento de cupo
+When: el cliente tiene línea de crédito disponible en la SBIF
+Then: debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo tope máximo permitido.
+Given: intento realizar un aumento de cupo con tope máximo permitido
+When: el cliente tiene disponible autorización
+Then: debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo superando tope máximo permitido.
+Given: intento realizar un aumento de cupo superando el tope máximo permitido
+When: el cliente tiene disponible autorización
+Then: No debe permitir realizar el aumento de cupo
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo y posteriormente realizar compra sin superar tope máximo.
+Given: que realizo el aumento de cupo y luego realizo compra sin superar tope máximo
+When: el cliente ya tiene su nuevo aumento de cupo disponible
+Then: debe permitir realizar la compra de manera exitosa
+
+
+
+Feature: Aumento de cupo
+Scenario: Realizar aumento de cupo y posteriormente realizar compra superando tope máximo.
+Given: que realizo el aumento de cupo y luego realizo compra superando tope máximo
+When: el cliente ya tiene su nuevo aumento de cupo disponible
+Then: No debe permitir realizar la compra, arrojando error de superación tope máximo de cupo permitido.
